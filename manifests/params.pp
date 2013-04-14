@@ -8,11 +8,11 @@ class dhcp::params {
       $dhcpd       = '/usr/sbin/dhcpd'
     }
     'ubuntu': {
+      $dhcpd       = '/usr/sbin/dhcpd'
       if versioncmp($::operatingsystemrelease, '12.04') >= 0 {
         $dhcp_dir    = '/etc/dhcp'
       } else {
         $dhcp_dir    = '/etc/dhcp3'
-        $dhcpd       = '/usr/sbin/dhcpd'
       }
       $packagename = 'isc-dhcp-server'
       $servicename = 'isc-dhcp-server'
